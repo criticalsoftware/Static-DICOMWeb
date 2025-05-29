@@ -1,4 +1,4 @@
-const dicomCodec = require("@cornerstonejs/dicom-codec");
+const dicomCodec = require("../../../../../@cornerstonejs/dicom-codec");
 const getImageInfo = require("./getImageInfo");
 
 async function decodeImage(imageFrame, dataset, transferSyntaxUid) {

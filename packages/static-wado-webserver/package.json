@@ -1,6 +1,6 @@
 {
   "name": "@radicalimaging/static-wado-webserver",
-  "version": "1.5.0",
+  "version": "1.5.3",
   "description": "Webserver to serve a static-wado repo",
   "publishConfig": {
     "access": "public"
@@ -33,9 +33,11 @@
   },
   "homepage": "https://github.com/OHIF/static-wado#readme",
   "license": "ISC",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
+  "module": "dist/index.js",
   "directories": {
     "lib": "lib",
+    "dist": "dist",
     "bin": "bin"
   },
   "files": [
@@ -47,19 +49,23 @@
   },
   "scripts": {
     "test": "jest --config ./jest.config.js",
-    "build": "echo \"No build yet\" && exit 0",
+    "build": "bun run build:esm",
+    "build:esm": "bun build lib/index.mjs --target node --outdir dist --",
     "link:exec": "npm install -g && npm link",
     "lint": "npx eslint --color \"**/*.{js,mjs,cjs}\"",
-    "lint:fix": "npx eslint --fix --color \"**/*.{js,mjs,cjs}\""
+    "lint:fix": "npx eslint --fix --color \"**/*.{js,mjs,cjs}\"",
+    "pack:js": "npm pack --",
+    "publishJS": "yarn publish"
   },
   "dependencies": {
-    "@radicalimaging/static-wado-creator": "^1.5.0",
-    "@radicalimaging/static-wado-plugins": "^1.5.0",
-    "@radicalimaging/static-wado-util": "^1.5.0",
+    "@radicalimaging/static-wado-creator": "file:../static-wado-creator",
+    "@radicalimaging/static-wado-plugins": "file:../static-wado-plugins",
+    "@radicalimaging/static-wado-util": "file:../static-wado-util",
     "config-point": ">=0.5.1",
     "cors": "^2.8.5",
-    "dcmjs": "^0.29.5",
-    "dcmjs-dimse": "^0.0.15",
+    "dcmjs": "0.35.0",
+    "dcmjs-dimse": "^0.1.30",
+    "depd": "^2.0.0",
     "express": "^4.18.2",
     "formidable": "^2.0.1",
     "morgan": "^1.10.0",
