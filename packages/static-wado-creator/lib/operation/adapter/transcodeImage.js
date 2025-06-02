@@ -1,4 +1,4 @@
-const dicomCodec = require("../../../../../@cornerstonejs/dicom-codec");
+const dicomCodec = require("../../../../../../@radicalimaging/node_modules/@cornerstonejs/dicom-codec");
 const { Tags, replicate } = require("@radicalimaging/static-wado-util");
 const getImageInfo = require("./getImageInfo");
 

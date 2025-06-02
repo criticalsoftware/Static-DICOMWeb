@@ -1,4 +1,4 @@
-const dicomCodec = require("../../../@cornerstonejs/dicom-codec");
+const dicomCodec = require("../../../@radicalimaging/node_modules/@cornerstonejs/dicom-codec");
 // const staticCS = require("@radicalimaging/static-cs-lite");
 const {
   Stats,
