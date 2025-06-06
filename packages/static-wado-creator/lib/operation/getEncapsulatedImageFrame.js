@@ -1,4 +1,4 @@
-const dicomParser = require("dicom-parser");
+const dicomParser = require("../../dicom-parser__");
 
 /**
  * Function to deal with extracting an image frame from an encapsulated data set.

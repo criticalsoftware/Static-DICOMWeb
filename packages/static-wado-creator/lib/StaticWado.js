@@ -1,4 +1,5 @@
-const dicomCodec = require("../../../../@radicalimaging/node_modules/@cornerstonejs/dicom-codec");
+const importPath = process.env.VITE_DEV_SERVER_URL ? "../../../../" : "../../../../../";
+const dicomCodec = require(importPath + "@radicalimaging/node_modules/@cornerstonejs/dicom-codec");
 // const staticCS = require("@radicalimaging/static-cs-lite");
 const {
   Stats,
@@ -9,7 +10,7 @@ const {
   asyncIterableToBuffer,
   Tags,
 } = require("@radicalimaging/static-wado-util");
-const dicomParser = require("../../dicom-parser__/dist/dicomParser.js");
+const dicomParser = require("../dicom-parser__/dist/dicomParser.js");
 const fs = require("fs");
 const path = require("path");
 const { NotificationService } = require("@radicalimaging/static-wado-util");

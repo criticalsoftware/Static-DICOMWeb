@@ -1,4 +1,5 @@
-const dicomCodec = require("../../../../../../@radicalimaging/node_modules/@cornerstonejs/dicom-codec");
+const importPath = process.env.VITE_DEV_SERVER_URL ? "../../../../" : "../../../../../";
+const dicomCodec = require(importPath + "../../@radicalimaging/node_modules/@cornerstonejs/dicom-codec");
 const { Tags, replicate } = require("@radicalimaging/static-wado-util");
 const getImageInfo = require("./getImageInfo");
 

@@ -29,14 +29,14 @@ const DicomWebServer = async (params) => {
   await setRoutes(app, params);
 
   const superListen = app.listen;
-  app.listen = (port) => {
+  const server = app.listen = (port) => {
     if (port) superListen.call(app, port);
     else {
       console.log(`Server listening on ${params.port || 5000}`);
       superListen.call(app, app.params.port || 5000);
     }
   };
-
+  app.__server = server;
   return app;
 };
 
