@@ -1,0 +1,36 @@
+{
+  "name": "@radicalimaging/dicom-codec",
+  "version": "1.99.7",
+  "description": "",
+  "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "echo 'Nothing to build' && exit 0",
+    "build:ci": "yarn run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=0.14"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "webpack": "^5.22.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "@cornerstonejs/codec-big-endian": "file:../codec-big-endian",
+    "@cornerstonejs/codec-charls": "file:../codec-charls",
+    "@cornerstonejs/codec-libjpeg-turbo-8bit": "file:../codec-libjpeg-turbo-8bit",
+    "@cornerstonejs/codec-little-endian": "file:../codec-little-endian",
+    "@cornerstonejs/codec-openjpeg": "file:../codec-openjpeg",
+    "@cornerstonejs/codec-openjph": "file:../codec-openjph",
+    "browser-or-node": "^2.1.1",
+    "jpeg-lossless-decoder-js": "^2.1.2"
+  },
+  "gitHead": "01fbc1800761d035036ffae4d61fef2564844287"
+}

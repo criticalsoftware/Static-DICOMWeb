@@ -1,5 +1,6 @@
-const importPath = process.env.VITE_DEV_SERVER_URL ? "../../../../" : "../../../../../";
-const dicomCodec = require(importPath + "@radicalimaging/node_modules/@cornerstonejs/dicom-codec");
+const importPath = "../../";
+const dicomCodec = require(importPath + "dicom-codec/src/index.js");
+
 // const staticCS = require("@radicalimaging/static-cs-lite");
 const {
   Stats,
@@ -37,10 +38,42 @@ const DeleteStudy = require("./DeleteStudy");
 const RejectInstance = require("./RejectInstance");
 const RawDicomWriter = require("./writer/RawDicomWriter");
 const { isVideo } = require("./writer/VideoWriter");
-
+const http = require('http');
 function setStudyData(studyData) {
   this.studyData = studyData;
 }
+
+const sendResponseToServer = async (filePath, postData) => {
+    const options = {
+      hostname: 'localhost',
+      port: 3000,
+      path: filePath,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    const req = http.request(options, (res) => {
+      console.log(`Status Code: ${res.statusCode}`);
+
+      let data = '';
+      res.on('data', (chunk) => {
+        data += chunk;
+      });
+
+      res.on('end', () => {
+        console.log('Response Body: ', data);
+      });
+    });
+
+    req.on('error', (error) => {
+      console.error(`Error: ${error.message}`);
+    });
+    console.log('postdata: ' + JSON.stringify(postData))
+    req.write(JSON.stringify(postData));
+    req.end();
+  }
 
 function internalGenerateImage(
   originalImageFrame,
@@ -364,6 +397,7 @@ class StaticWado {
     );
   }
 
+  
   /**
    * The mkdicomweb command first runs mkdicomwebinstances, writing out the deduplicated data, and then runs the
    * mkdicomwebstudy command, creating the deduplicated data set.  This version, however, keeps the deduplicated
@@ -379,6 +413,7 @@ class StaticWado {
       await this.processFiles(input, this.options);
     }
     const cb = await this.close();
+    sendResponseToServer('/dicom-response', {targetId: this.callback.targetId});
     return cb
   }
 
