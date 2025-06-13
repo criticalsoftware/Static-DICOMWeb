@@ -1,5 +1,5 @@
-const codecModule = require("../../../codec-libjpeg-turbo-8bit");
-const codecWasmModule = require("../../../codec-libjpeg-turbo-8bit/dist/libjpegturbowasm.js");
+const codecModule = require("../../codec-libjpeg-turbo-8bit");
+const codecWasmModule = require("../../codec-libjpeg-turbo-8bit/dist/libjpegturbowasm.js");
 const codecFactory = require("./codecFactory");
 
 /**

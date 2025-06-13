@@ -1,4 +1,4 @@
-const dicomCodec = require("../../../dicom-codec");
+const dicomCodec = require("../../dicom-codec");
 // const staticCS = require("@radicalimaging/static-cs-lite");
 const {
   Stats,

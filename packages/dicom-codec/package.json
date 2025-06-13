@@ -23,12 +23,12 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
-    "@cornerstonejs/codec-big-endian": "file:../codec-big-endian",
-    "@cornerstonejs/codec-charls": "file:../codec-charls",
-    "@cornerstonejs/codec-libjpeg-turbo-8bit": "file:../codec-libjpeg-turbo-8bit",
-    "@cornerstonejs/codec-little-endian": "file:../codec-little-endian",
-    "@cornerstonejs/codec-openjpeg": "file:../codec-openjpeg",
-    "@cornerstonejs/codec-openjph": "file:../codec-openjph",
+    "@cornerstonejs/codec-big-endian": "./codec-big-endian",
+    "@cornerstonejs/codec-charls": "./codec-charls",
+    "@cornerstonejs/codec-libjpeg-turbo-8bit": "./codec-libjpeg-turbo-8bit",
+    "@cornerstonejs/codec-little-endian": "./codec-little-endian",
+    "@cornerstonejs/codec-openjpeg": "./codec-openjpeg",
+    "@cornerstonejs/codec-openjph": "./codec-openjph",
     "browser-or-node": "^2.1.1",
     "jpeg-lossless-decoder-js": "^2.1.2"
   },

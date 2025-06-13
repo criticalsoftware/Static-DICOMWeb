@@ -1,5 +1,5 @@
-const codecModule = require("../../../codec-charls");
-const codecWasmModule = require("../../../codec-charls/dist/charlswasm.js");
+const codecModule = require("../../codec-charls");
+const codecWasmModule = require("../../codec-charls/dist/charlswasm.js");
 const codecFactory = require("./codecFactory");
 
 /**

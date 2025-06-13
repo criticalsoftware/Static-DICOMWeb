@@ -1,5 +1,5 @@
-const codecModule = require("../../../codec-openjpeg");
-const codecWasmModule = require("../../../codec-openjpeg/dist/openjpegwasm.js");
+const codecModule = require("../../codec-openjpeg");
+const codecWasmModule = require("../../codec-openjpeg/dist/openjpegwasm.js");
 const codecFactory = require("./codecFactory");
 
 /**

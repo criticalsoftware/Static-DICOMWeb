@@ -1,4 +1,4 @@
-const codecModule = require("../../../codec-openjph");
+const codecModule = require("../../codec-openjph");
 const codecWasmModule = null;
 // require("@cornerstonejs/codec-openjph/wasmjs");
 const codecFactory = require("./codecFactory");

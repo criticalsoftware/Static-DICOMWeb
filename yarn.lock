@@ -1637,29 +1637,29 @@
   resolved "https://registry.npmjs.org/@colors/colors/-/colors-1.6.0.tgz"
   integrity sha512-Ir+AOibqzrIsL6ajt3Rz3LskB7OiMVHqltZmspbW/TJuTVuyOMirVqAkjfY6JISiLHgyNqicAC8AyHHGzNd/dA==
 
-"@cornerstonejs/codec-big-endian@file:../codec-big-endian", "@cornerstonejs/codec-big-endian@file:C:\\Users\\drake\\electron-vite-react\\Static-DICOMWeb\\packages\\codec-big-endian":
+"@cornerstonejs/codec-big-endian@./codec-big-endian":
   version "0.99.0"
-  resolved "file:packages/codec-big-endian"
+  resolved "file:packages/dicom-codec/codec-big-endian"
 
-"@cornerstonejs/codec-charls@file:../codec-charls", "@cornerstonejs/codec-charls@file:C:\\Users\\drake\\electron-vite-react\\Static-DICOMWeb\\packages\\codec-charls":
+"@cornerstonejs/codec-charls@./codec-charls":
   version "1.99.3"
-  resolved "file:packages/codec-charls"
+  resolved "file:packages/dicom-codec/codec-charls"
 
-"@cornerstonejs/codec-libjpeg-turbo-8bit@file:../codec-libjpeg-turbo-8bit", "@cornerstonejs/codec-libjpeg-turbo-8bit@file:C:\\Users\\drake\\electron-vite-react\\Static-DICOMWeb\\packages\\codec-libjpeg-turbo-8bit":
+"@cornerstonejs/codec-libjpeg-turbo-8bit@./codec-libjpeg-turbo-8bit":
   version "1.99.2"
-  resolved "file:packages/codec-libjpeg-turbo-8bit"
+  resolved "file:packages/dicom-codec/codec-libjpeg-turbo-8bit"
 
-"@cornerstonejs/codec-little-endian@file:../codec-little-endian", "@cornerstonejs/codec-little-endian@file:C:\\Users\\drake\\electron-vite-react\\Static-DICOMWeb\\packages\\codec-little-endian":
+"@cornerstonejs/codec-little-endian@./codec-little-endian":
   version "0.99.6"
-  resolved "file:packages/codec-little-endian"
+  resolved "file:packages/dicom-codec/codec-little-endian"
 
-"@cornerstonejs/codec-openjpeg@file:../codec-openjpeg", "@cornerstonejs/codec-openjpeg@file:C:\\Users\\drake\\electron-vite-react\\Static-DICOMWeb\\packages\\codec-openjpeg":
+"@cornerstonejs/codec-openjpeg@./codec-openjpeg":
   version "1.99.4"
-  resolved "file:packages/codec-openjpeg"
+  resolved "file:packages/dicom-codec/codec-openjpeg"
 
-"@cornerstonejs/codec-openjph@file:../codec-openjph", "@cornerstonejs/codec-openjph@file:C:\\Users\\drake\\electron-vite-react\\Static-DICOMWeb\\packages\\codec-openjph":
+"@cornerstonejs/codec-openjph@./codec-openjph":
   version "2.99.5"
-  resolved "file:packages/codec-openjph"
+  resolved "file:packages/dicom-codec/codec-openjph"
 
 "@csstools/color-helpers@^5.0.2":
   version "5.0.2"
@@ -16769,25 +16769,7 @@ webidl-conversions@^7.0.0:
   resolved "https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-7.0.0.tgz"
   integrity sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==
 
-webpack-cli@^4.5.0, webpack-cli@4.x.x:
-  version "4.10.0"
-  resolved "https://registry.npmjs.org/webpack-cli/-/webpack-cli-4.10.0.tgz"
-  integrity sha512-NLhDfH/h4O6UOy+0LSso42xvYypClINuMNBVVzX4vX98TmTaTUxwRbXdhucbFMd2qLaCTcLq/PdYrvi8onw90w==
-  dependencies:
-    "@discoveryjs/json-ext" "^0.5.0"
-    "@webpack-cli/configtest" "^1.2.0"
-    "@webpack-cli/info" "^1.5.0"
-    "@webpack-cli/serve" "^1.7.0"
-    colorette "^2.0.14"
-    commander "^7.0.0"
-    cross-spawn "^7.0.3"
-    fastest-levenshtein "^1.0.12"
-    import-local "^3.0.2"
-    interpret "^2.2.0"
-    rechoir "^0.7.0"
-    webpack-merge "^5.7.3"
-
-webpack-cli@^4.8.0, webpack-cli@^5.0.1, webpack-cli@5.x.x:
+webpack-cli@^4.5.0, webpack-cli@^4.8.0, webpack-cli@^5.0.1, webpack-cli@5.x.x:
   version "5.1.4"
   resolved "https://registry.npmjs.org/webpack-cli/-/webpack-cli-5.1.4.tgz"
   integrity sha512-pIDJHIEI9LR0yxHXQ+Qh95k2EvXpWzZ5l+d+jIo+RdSm9MiHfzazIxwwni/p7+x4eJZuvG1AJwgC4TNQ7NRgsg==
@@ -16804,6 +16786,24 @@ webpack-cli@^4.8.0, webpack-cli@^5.0.1, webpack-cli@5.x.x:
     import-local "^3.0.2"
     interpret "^3.1.1"
     rechoir "^0.8.0"
+    webpack-merge "^5.7.3"
+
+webpack-cli@4.x.x:
+  version "4.10.0"
+  resolved "https://registry.npmjs.org/webpack-cli/-/webpack-cli-4.10.0.tgz"
+  integrity sha512-NLhDfH/h4O6UOy+0LSso42xvYypClINuMNBVVzX4vX98TmTaTUxwRbXdhucbFMd2qLaCTcLq/PdYrvi8onw90w==
+  dependencies:
+    "@discoveryjs/json-ext" "^0.5.0"
+    "@webpack-cli/configtest" "^1.2.0"
+    "@webpack-cli/info" "^1.5.0"
+    "@webpack-cli/serve" "^1.7.0"
+    colorette "^2.0.14"
+    commander "^7.0.0"
+    cross-spawn "^7.0.3"
+    fastest-levenshtein "^1.0.12"
+    import-local "^3.0.2"
+    interpret "^2.2.0"
+    rechoir "^0.7.0"
     webpack-merge "^5.7.3"
 
 webpack-dev-middleware@^3.7.0:
